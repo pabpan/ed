@@ -1,5 +1,5 @@
  /*
- * NOMBRE: PABLO SUÁREZ
+ * NOMBRE: PABLO SUÁREZ 
  * FECHA: 07/10/2019
  * DESC.: ADIVINA
  */
@@ -15,7 +15,10 @@ public class Adivina {
 		Scanner teclado = new Scanner(System.in); /*INICIALIZAMOS EL TECLADO*/
 
 
-		int num=1;
+		int num=1; /*INICIALIZAMOS EL NÚMERO A LEER*/
+		
+		
+		/*MIENTRAS EL NÚMERO SEA DISTINTO DE 0 SEGUIRÁ DENTRO DEL BUCLE*/
 		
 		while (num!=0) {
 			System.out.print("Introduce un número (0 para terminar): \n");
@@ -23,17 +26,8 @@ public class Adivina {
 		}
 		System.out.println("Fin del programa");
 
-		/*
-		System.out.println("Introduce un número: ");
-		num=teclado.nextInt();
+		teclado.close();
 		
-		if (num==aleatorio) 
-			System.out.println("El número introducido es igual al aleatorio");
-		else if (num<aleatorio)
-			System.out.println("El número no es el aleatorio");
-			else (num>aleatorio)
-				System.out.println("El número no es el aleatorio");
-		else	*/	
 	}
 
 }
