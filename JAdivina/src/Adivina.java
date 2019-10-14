@@ -15,7 +15,7 @@ public class Adivina {
 		Scanner teclado = new Scanner(System.in); /*INICIALIZAMOS EL TECLADO*/
 
 
-		int num=1; /*INICIALIZAMOS EL NÚMERO A LEER*/
+		int num=18; /*INICIALIZAMOS EL NÚMERO A LEER*/
 		
 		
 		/*MIENTRAS EL NÚMERO SEA DISTINTO DE 0 SEGUIRÁ DENTRO DEL BUCLE*/
