@@ -14,10 +14,8 @@ public class Adivina {
 		
 		Scanner teclado = new Scanner(System.in); /*INICIALIZAMOS EL TECLADO*/
 
-
 		int num=18; /*INICIALIZAMOS EL NÚMERO A LEER*/
-		
-		
+				
 		/*MIENTRAS EL NÚMERO SEA DISTINTO DE 0 SEGUIRÁ DENTRO DEL BUCLE*/
 		
 		while (num!=0) {
@@ -31,3 +29,8 @@ public class Adivina {
 	}
 
 }
+/*Librería para generar aleatorios: ramdom
+ * import java.util.Random;
+ * Random random = new Random();
+ * int numeroaleatorio=random.nextInt(1000) + 1;
+ * System.out.println("Numero aleatorio = "+numeroaleatorio)*/
