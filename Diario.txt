@@ -1,0 +1,250 @@
+16/09/2019 
+
+- Creamos usuario en GitHub ------> https://github.com/pabpan
+
+- Creadomos un repositorio llamado "ed" (Con README.md y .gitignore (plantilla Java))
+
+	 ----------------------------
+	| COMENZAMOS CON EL TERMINAL |
+	 ----------------------------
+
+PARA CLONAR EL CONTENIDO DE LA CARPETA ED A NUESTRO PC:
+
+1.- Copiamos desde la web el repositorio:
+
+	https://github.com/pabpan/ed.git
+
+2.- En la consola hacemos un git clone https://github.com/pabpan/ed.git
+
+19/09/2019
+
+	 ----------------------------------------------------------------
+	|PRIMEROS PASOS CUANDO CONFIGURAMOS NUESTRO REPOSITORIO EN UN PC |
+	 ----------------------------------------------------------------
+
+1.- git config --global user.name ---> pabpan
+2.- git config --global user.email --> pabpan@alu.iesserpis.org
+3.- git config --global push.default simple
+
+Estos datos solo se introducirán la primera vez que clonemos nuestro repositorio en local
+
+	 ----------------------------------------------------------------
+	|COMANDOS UTILIZADOS PARA GESTIONAR NUESTRO REPOSITORIO EN LOCAL |
+	 ----------------------------------------------------------------
+
+- git status (Comprobamos si la rama local está actualizada con el master en github
+- git add . (Subimos todos los cambios que hayamos realizado en todos nuestros archivos
+- git add diario.txt (subiremos solo el archivo diario.txt)
+- git commit -m "Mensaje explicando los cambios realizados"
+- git push (Para subir confirmaciones de cambios realizadas en tu rama local al repositorio remoto)
+- git log (Para consultar las versiones)
+- git branch -vv (Vemos el mensaje escrito en el último commit)
+- git checkout (se puede usar para crear ramas o cambiar entre ellas)
+- git checkout master (Para volver a la ultima versión)
+
+
+23/09/19
+
+	 ------------
+	| VIRTUALBOX |
+	 ------------
+
+1.- Creamos una máquina virtual "SerpisDAM"
+	- Memoria RAM: 2048 MB
+	- DISCO 20 GB
+	- 2 procesadores.
+
+2.- DATOS:
+	- Nombre: administrador
+	- Nombre Equipo: SerpisDAM
+	- Pass: sistemas
+
+	 ----------------------
+	| COMANDOS EN TERMINAL |
+	 ----------------------
+
+- sudo -i (pedirá la contraseña de administrador)
+- pwd (para saber el directorio en el que nos encontramos)
+- apt update (Comprueba si hay actualizaciones)
+- apt full-upgrade (Actualiza el sistemas por completo)
+
+3.- Comenzamos con un "Hola Mundo" en C.
+
+- Creamos un documento HolaMundo.c y pegamos el codigo:
+
+# include <stdio.h>
+
+int main(void) {
+	printf("Hola Mundo\n");
+	return 0;
+}
+
+- A continuación en el terminal usamos cat Holamundo.c y nos muestra el interior del archivo.
+
+- Para compilarlo gastamos el comando gcc -o NombreDeArchivo1 <NombreDelArchivo> (El NombreDeArchivo1 es un archivo que crea nuevo para compilar)
+- Ejecutamos el archivo ---> ./NombreDelArchivo1 
+
+26/09/19
+
+	 --------------------
+	| EMPEZAMOS CON JAVA |
+	 --------------------
+
+- java -version -> JRE (Gasta la version 1.11
+- javac -version Para ver la version de -> JDK  ( Gasta la version 1.8)
+- Instalamos java en VirtualBox:
+- sudo apt install default-jre
+
+30/09/19
+
+	 -------------------
+	| HOLAMUNDO EN JAVA |
+	 -------------------
+
+class HolaMundo
+{
+	public static void main(String args[]) {
+		System.out.println("Hola Mundo");	
+	}
+
+}
+
+- javac "Nombredelarchivo.java" (Comprobamos el programa)
+- Si no ocurre nada es porque ha compilado correctamente, de lo contrario saldra el error por pantalla.
+- Para que se vea por el terminal el resultado de la compilacion, debemos hacer: java "Nombredelarchivo" sin el .java 
+- Con Eclipse creamos un nuevo projecto "FILE/NEW PROJECT"
+- Dentro creamos una nueva clase con el "Package" de la clase llamándolo: iesserpis.ed
+- Al cambiar el package, la clase completa ahora se llama: iesserpis.ed.HolaMundo 
+- Se han creado ahora los directorios: iesserpis, dentro de el el bin y src y dentro estan los HolaMundo.java y HolaMundo.class
+- Para ejecutarlo en el terminal, tenemosque llegar a la carpeta bin. (cd ed/JHolaMundo/bin)
+ y una vez aqui: java iesserpis.ed.HolaMundo
+
+
+07/10/19
+
+	 ----------------------------
+	| ADIVINA CON RANDOM EN JAVA |
+	 ----------------------------
+
+ //Librería para generar aleatorios: ramdom
+ //import java.util.Random;
+ //Random random = new Random();
+ //int numeroaleatorio=random.nextInt(1000) + 1;
+ //System.out.println("Numero aleatorio = "+numeroaleatorio);
+
+/*IMPORTAMOS LA LIBRERÍA SCANNER PARA LEER POR TECLADO*/
+
+import java.util.Scanner; 
+
+public class Adivina {
+	
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in); /*INICIALIZAMOS EL TECLADO*/
+
+		/*INICIALIZAMOS EL NÚMERO A LEER*/
+		
+		int num=18; 
+				
+		/*MIENTRAS EL NÚMERO SEA DISTINTO DE 0 SEGUIRÁ DENTRO DEL BUCLE*/
+		
+		while (num!=0) {
+			System.out.print("Introduce un número (0 para terminar): \n");
+				num=teclado.nextInt();
+		}
+		System.out.println("Fin del programa");
+
+		teclado.close();
+		
+	}
+
+}
+
+10-14-17/10/19
+
+- Terminamos el programa de Adivina
+
+	 ----------
+	| CONTADOR |
+	 ----------
+
+ //APRENDEMOS A USAR UN FOR PARA REALIZAR UN CONTADOR
+
+public class Contador {
+	
+	public static void main(String[] args) {
+		
+
+		int contador=1;
+				
+		while (contador<=5) {
+			System.out.println("Contador: "+contador);
+			contador=contador+1;
+			} /*ES LO MISMO QUE contador++*/
+	
+		
+		/*OTRA FORMA DE HACERLO CON UN FOR*/
+				
+		/*for (int contador=1; contador<=5; contador++) {
+		System.out.println("Contador: "+ contador);*/
+		
+		System.out.println("Fin del programa");
+		
+	}
+
+}
+
+21-24-28/10/19
+
+- Hemos hecho un programa que busca el digito que queremos encontrar dentro de un vector y nos dice la posicion en la que se encuentra
+
+	 ------------------
+	| VECTORES EN JAVA |
+	 ------------------
+
+package iesserpis.ed;
+
+public class Vector {
+
+	public static void main(String[] args) {
+
+		//int[] v = new int[] {17,12,15,9,14};
+		
+		//for (int index=0; index<5; index++)
+		//{
+		//	if (v[index]==9)
+		//		System.out.printf("está en la posición: "+index);
+		//}
+			
+			//System.out.printf("v[%s](Elemento) = %s %n(valor)", index, v[ index ]);
+		
+		//int index=0;
+		
+		//while (index<5) {
+		//System.out.println(index);
+		//index++;
+		//}
+		
+		
+		int[] v = new int[] {17, 12, 15, 9, 14, 9};
+		int x=9;
+		int posicion;
+		
+		posicion = indexOf(v, x);
+		
+		System.out.println("index=" + posicion);
+		System.out.println("FIN");
+		
+		}
+		
+		public static int indexOf (int[] v, int numero) {
+			int index=0;
+			while (index < v.length && v[index] != numero)
+				index++;
+				if (index==v.length)
+					return -1;
+			return index;
+	}
+
+}
+
