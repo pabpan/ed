@@ -1,5 +1,5 @@
-//PABLO SUÁREZ
-//24-10-19
+//PABLO SUÁREZ 
+//31-10-19
 //VECTORES EN JAVA
 
 package iesserpis.ed;
@@ -37,13 +37,18 @@ public class Vector {
 		
 		}
 		
-		public static int indexOf (int[] v, int numero) {
+		public static int indexOf (int[] v, int x) {  //esta x la podríamos llamar como quisiéramos
 			int index=0;
-			while (index < v.length && v[index] != numero)
+			while (index < v.length && v[index] != x) //esta x la podríamos llamar como quisiéramos
 				index++;
 				if (index==v.length)
 					return -1;
 			return index;
+			
+			//for (int index=0; index<v.length; index++;)
+			//	if (v[index] == x)
+			//	return index;
+			//return -1;
 		}
 
 	}
