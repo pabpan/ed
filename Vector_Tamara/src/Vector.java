@@ -1,15 +1,17 @@
+
+
 public class Vector {
 
 	public static void main(String[] args) {
 
-		/*int vector[]= {21,14,9,18,3};
+		int vector[]= {21,14,9,18,3};
 		ordenar(vector);
 		for (int i = 0; i < vector.length; i++) {
 			System.out.print(vector[i]+" ");	
 			if (i<vector.length-1) {
 				System.out.print(", ");	
 			}
-		}*/
+		}
 			
 	}
 	
@@ -20,6 +22,7 @@ public class Vector {
 			if (v[i] > maximo)
 				maximo = v[i];		
 		}return maximo;
+		
 		
 	}
 
