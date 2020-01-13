@@ -1,0 +1,5 @@
+/home/pabpan/JAVA/ed/Monodevelop/Prueba/Prueba/bin/Debug/Prueba.exe
+/home/pabpan/JAVA/ed/Monodevelop/Prueba/Prueba/bin/Debug/Prueba.pdb
+/home/pabpan/JAVA/ed/Monodevelop/Prueba/Prueba/obj/x86/Debug/Prueba.csprojAssemblyReference.cache
+/home/pabpan/JAVA/ed/Monodevelop/Prueba/Prueba/obj/x86/Debug/Prueba.exe
+/home/pabpan/JAVA/ed/Monodevelop/Prueba/Prueba/obj/x86/Debug/Prueba.pdb
