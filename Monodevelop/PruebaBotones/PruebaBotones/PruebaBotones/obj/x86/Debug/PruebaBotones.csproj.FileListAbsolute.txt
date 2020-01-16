@@ -1,0 +1,5 @@
+/home/pabpan/JAVA/ed/Monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/bin/Debug/PruebaBotones.exe
+/home/pabpan/JAVA/ed/Monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/bin/Debug/PruebaBotones.pdb
+/home/pabpan/JAVA/ed/Monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/obj/x86/Debug/PruebaBotones.csprojAssemblyReference.cache
+/home/pabpan/JAVA/ed/Monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/obj/x86/Debug/PruebaBotones.exe
+/home/pabpan/JAVA/ed/Monodevelop/PruebaBotones/PruebaBotones/PruebaBotones/obj/x86/Debug/PruebaBotones.pdb

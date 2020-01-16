@@ -1,20 +1,13 @@
 ﻿<Properties StartupConfiguration="{AB1B4F51-9987-4EA5-9A7B-70FEDAAE819E}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Prueba/Program.cs">
     <Files>
-      <File FileName="Prueba/Program.cs" Line="54" Column="16" />
+      <File FileName="Prueba/Program.cs" Line="59" Column="1" />
     </Files>
     <Pads>
-      <Pad Id="ProjectPad">
+      <Pad Id="ClassPad">
         <State name="__root__">
-          <Node name="Prueba" expanded="True">
-            <Node name="Prueba" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node name="Prueba" expanded="True" selected="True" />
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
