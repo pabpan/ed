@@ -91,8 +91,9 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">GtkButton</property>
+                <property name="Label" translatable="yes">Aleatorio</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnAleatorioClicked" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -106,8 +107,9 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">GtkButton</property>
+                <property name="Label" translatable="yes">Salir</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnSalirClicked" />
               </widget>
               <packing>
                 <property name="Position">2</property>
