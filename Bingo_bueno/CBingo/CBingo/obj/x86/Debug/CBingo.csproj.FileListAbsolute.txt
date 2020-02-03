@@ -1,0 +1,5 @@
+/home/pabpan/JAVA/ed/Bingo_bueno/CBingo/CBingo/obj/x86/Debug/CBingo.csprojAssemblyReference.cache
+/home/pabpan/JAVA/ed/Bingo_bueno/CBingo/CBingo/bin/Debug/CBingo.exe
+/home/pabpan/JAVA/ed/Bingo_bueno/CBingo/CBingo/bin/Debug/CBingo.pdb
+/home/pabpan/JAVA/ed/Bingo_bueno/CBingo/CBingo/obj/x86/Debug/CBingo.exe
+/home/pabpan/JAVA/ed/Bingo_bueno/CBingo/CBingo/obj/x86/Debug/CBingo.pdb

@@ -1,0 +1,5 @@
+/home/pabpan/JAVA/ed/Monodevelop/C_Tabla/C_tabla/C_tabla/bin/Debug/C_tabla.exe
+/home/pabpan/JAVA/ed/Monodevelop/C_Tabla/C_tabla/C_tabla/bin/Debug/C_tabla.pdb
+/home/pabpan/JAVA/ed/Monodevelop/C_Tabla/C_tabla/C_tabla/obj/x86/Debug/CBingo.csprojAssemblyReference.cache
+/home/pabpan/JAVA/ed/Monodevelop/C_Tabla/C_tabla/C_tabla/obj/x86/Debug/C_tabla.exe
+/home/pabpan/JAVA/ed/Monodevelop/C_Tabla/C_tabla/C_tabla/obj/x86/Debug/C_tabla.pdb

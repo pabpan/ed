@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_tabla", "C_tabla\C_tabla.csproj", "{2BE93F12-3577-4447-A666-4DD3C3B63436}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBingo", "C_tabla\CBingo.csproj", "{2BE93F12-3577-4447-A666-4DD3C3B63436}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
