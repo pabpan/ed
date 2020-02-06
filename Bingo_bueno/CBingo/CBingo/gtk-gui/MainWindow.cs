@@ -11,6 +11,8 @@ public partial class MainWindow
 
 	private global::Gtk.Button BJugar;
 
+	private global::Gtk.Button Breset;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
@@ -29,6 +31,7 @@ public partial class MainWindow
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.Text = new global::Gtk.Label();
 		this.Text.Name = "Text";
+		this.Text.Xalign = 0F;
 		this.Text.LabelProp = global::Mono.Unix.Catalog.GetString("Mi primer bingo");
 		this.hbox1.Add(this.Text);
 		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.Text]));
@@ -45,20 +48,33 @@ public partial class MainWindow
 		w2.Position = 1;
 		w2.Expand = false;
 		w2.Fill = false;
-		this.vbox1.Add(this.hbox1);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
-		w3.Position = 0;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.Breset = new global::Gtk.Button();
+		this.Breset.CanFocus = true;
+		this.Breset.Name = "Breset";
+		this.Breset.UseUnderline = true;
+		this.Breset.Label = global::Mono.Unix.Catalog.GetString("Resetear");
+		this.hbox1.Add(this.Breset);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.Breset]));
+		w3.PackType = ((global::Gtk.PackType)(1));
+		w3.Position = 2;
 		w3.Expand = false;
 		w3.Fill = false;
+		this.vbox1.Add(this.hbox1);
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
+		w4.Position = 0;
+		w4.Expand = false;
+		w4.Fill = false;
 		this.Add(this.vbox1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
 		this.DefaultWidth = 400;
-		this.DefaultHeight = 300;
+		this.DefaultHeight = 313;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.BJugar.Clicked += new global::System.EventHandler(this.OnBJugarClicked);
+		this.Breset.Clicked += new global::System.EventHandler(this.OnBresetClicked);
 	}
 }

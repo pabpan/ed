@@ -1,19 +1,18 @@
 ﻿using System;
 using Gtk;
 using CBingo;
+using System.Diagnostics;
+
 
 public partial class MainWindow : Gtk.Window
 {
+    Bombo bombo = new Bombo();
+    Panel panel;
+
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
-        Panel panel = new Panel(vbox1);
-        /*Bombo bombo = new Bombo();
-        BJugar.Clicked += delegate
-        {
-            int numero = bombo.sacarbola();
-        }*/
-
+        panel = new Panel(vbox1);
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
@@ -24,7 +23,12 @@ public partial class MainWindow : Gtk.Window
 
     protected void OnBJugarClicked(object sender, EventArgs e)
     {
-        Bombo bombo = new Bombo();
         int numero = bombo.sacarbola();
+        panel.Marcar(numero);
+    }
+
+    protected void OnBresetClicked(object sender, EventArgs e)
+    {
+        panel = new Panel(vbox1);
     }
 }
