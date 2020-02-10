@@ -1,0 +1,5 @@
+/home/pabpan/JAVA/ed/calculadora/Calculadora/Calculadora/bin/Debug/Calculadora.exe
+/home/pabpan/JAVA/ed/calculadora/Calculadora/Calculadora/bin/Debug/Calculadora.pdb
+/home/pabpan/JAVA/ed/calculadora/Calculadora/Calculadora/obj/x86/Debug/Calculadora.csprojAssemblyReference.cache
+/home/pabpan/JAVA/ed/calculadora/Calculadora/Calculadora/obj/x86/Debug/Calculadora.exe
+/home/pabpan/JAVA/ed/calculadora/Calculadora/Calculadora/obj/x86/Debug/Calculadora.pdb

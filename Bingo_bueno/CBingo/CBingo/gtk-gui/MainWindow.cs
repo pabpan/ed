@@ -11,6 +11,8 @@ public partial class MainWindow
 
 	private global::Gtk.Button BJugar;
 
+	private global::Gtk.Button BSalir;
+
 	private global::Gtk.Button Breset;
 
 	protected virtual void Build()
@@ -49,22 +51,34 @@ public partial class MainWindow
 		w2.Expand = false;
 		w2.Fill = false;
 		// Container child hbox1.Gtk.Box+BoxChild
+		this.BSalir = new global::Gtk.Button();
+		this.BSalir.CanFocus = true;
+		this.BSalir.Name = "BSalir";
+		this.BSalir.UseUnderline = true;
+		this.BSalir.Label = global::Mono.Unix.Catalog.GetString("Salir");
+		this.hbox1.Add(this.BSalir);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.BSalir]));
+		w3.PackType = ((global::Gtk.PackType)(1));
+		w3.Position = 2;
+		w3.Expand = false;
+		w3.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
 		this.Breset = new global::Gtk.Button();
 		this.Breset.CanFocus = true;
 		this.Breset.Name = "Breset";
 		this.Breset.UseUnderline = true;
 		this.Breset.Label = global::Mono.Unix.Catalog.GetString("Resetear");
 		this.hbox1.Add(this.Breset);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.Breset]));
-		w3.PackType = ((global::Gtk.PackType)(1));
-		w3.Position = 2;
-		w3.Expand = false;
-		w3.Fill = false;
-		this.vbox1.Add(this.hbox1);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
-		w4.Position = 0;
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.Breset]));
+		w4.PackType = ((global::Gtk.PackType)(1));
+		w4.Position = 3;
 		w4.Expand = false;
 		w4.Fill = false;
+		this.vbox1.Add(this.hbox1);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
+		w5.Position = 0;
+		w5.Expand = false;
+		w5.Fill = false;
 		this.Add(this.vbox1);
 		if ((this.Child != null))
 		{
@@ -76,5 +90,6 @@ public partial class MainWindow
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.BJugar.Clicked += new global::System.EventHandler(this.OnBJugarClicked);
 		this.Breset.Clicked += new global::System.EventHandler(this.OnBresetClicked);
+		this.BSalir.Clicked += new global::System.EventHandler(this.OnBSalirClicked);
 	}
 }

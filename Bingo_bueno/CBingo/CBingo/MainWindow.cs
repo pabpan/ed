@@ -1,8 +1,6 @@
 ﻿using System;
 using Gtk;
 using CBingo;
-using System.Diagnostics;
-
 
 public partial class MainWindow : Gtk.Window
 {
@@ -29,6 +27,12 @@ public partial class MainWindow : Gtk.Window
 
     protected void OnBresetClicked(object sender, EventArgs e)
     {
+
         panel = new Panel(vbox1);
+    }
+
+    protected void OnBSalirClicked(object sender, EventArgs e)
+    {
+        Application.Quit();
     }
 }
