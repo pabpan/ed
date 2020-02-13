@@ -126,7 +126,6 @@ public partial class MainWindow
 		this.Ccancelar = new global::Gtk.Button();
 		this.Ccancelar.WidthRequest = 50;
 		this.Ccancelar.HeightRequest = 50;
-		this.Ccancelar.CanFocus = true;
 		this.Ccancelar.Name = "Ccancelar";
 		this.Ccancelar.UseUnderline = true;
 		this.Ccancelar.Label = "C";
@@ -364,7 +363,6 @@ public partial class MainWindow
 		this.Csalir.Clicked += new global::System.EventHandler(this.OnCsalirClicked);
 		this.Cvaciar.Clicked += new global::System.EventHandler(this.OnCvaciarClicked);
 		this.Ccancelar.Clicked += new global::System.EventHandler(this.OnCcancelarClicked);
-		this.Ccancelar.FocusInEvent += new global::Gtk.FocusInEventHandler(this.OnCcancelarFocusInEvent);
 		this.Csiete.Clicked += new global::System.EventHandler(this.OnCsieteClicked);
 		this.Cocho.Clicked += new global::System.EventHandler(this.OnCochoClicked);
 		this.Cnueve.Clicked += new global::System.EventHandler(this.OnCnueveClicked);

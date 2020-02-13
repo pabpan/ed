@@ -91,7 +91,6 @@
                 <property name="MemberName" />
                 <property name="WidthRequest">50</property>
                 <property name="HeightRequest">50</property>
-                <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label">C</property>
                 <property name="UseUnderline">True</property>

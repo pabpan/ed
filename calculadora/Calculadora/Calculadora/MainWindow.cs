@@ -3,10 +3,13 @@ using Gtk;
 
 public partial class MainWindow : Gtk.Window
 {
+    int contador = 0;
+
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
         Ccancelar.ModifyBg(StateType.Normal, new Gdk.Color(222, 78, 48));
+        Cmas.ModifyBg(StateType.Normal, new Gdk.Color(13, 164, 18));
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
@@ -17,9 +20,14 @@ public partial class MainWindow : Gtk.Window
 
     protected void OnCcomaClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + ",");
+
+        if (contador == 0)
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + ",");
+            contador++;
+        }
     }
 
     protected void OnCceroClicked(object sender, EventArgs e)
@@ -128,12 +136,18 @@ public partial class MainWindow : Gtk.Window
 
     protected void OnCcancelarClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
         Pantalla.DeleteText((Pantalla.Text.Length - 1), Pantalla.Text.Length);
+        String display = Pantalla.Text.ToString();
+        if (!display.Contains(","))
+        {
+            contador=0;
+        }
+
     }
     protected void OnCvaciarClicked(object sender, EventArgs e)
     {
         Pantalla.DeleteText(0, Pantalla.Text.Length);
+        contador=0;
     }
 
     protected void OnCsalirClicked(object sender, EventArgs e)
