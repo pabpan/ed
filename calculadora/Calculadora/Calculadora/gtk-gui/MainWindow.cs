@@ -65,9 +65,10 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
-		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.WindowPosition = ((global::Gtk.WindowPosition)(3));
 		this.BorderWidth = ((uint)(9));
 		this.Resizable = false;
+		this.AllowGrow = false;
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.vbox3 = new global::Gtk.VBox();
 		this.vbox3.Name = "vbox3";
@@ -79,12 +80,14 @@ public partial class MainWindow
 		// Container child hbox8.Gtk.Box+BoxChild
 		this.Ctitulo = new global::Gtk.Label();
 		this.Ctitulo.Name = "Ctitulo";
-		this.Ctitulo.LabelProp = global::Mono.Unix.Catalog.GetString("Calculadora v.1.0");
+		this.Ctitulo.LabelProp = global::Mono.Unix.Catalog.GetString("Calculadora");
 		this.hbox8.Add(this.Ctitulo);
 		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox8[this.Ctitulo]));
 		w1.Position = 0;
 		// Container child hbox8.Gtk.Box+BoxChild
 		this.Csalir = new global::Gtk.Button();
+		this.Csalir.WidthRequest = 50;
+		this.Csalir.HeightRequest = 50;
 		this.Csalir.CanFocus = true;
 		this.Csalir.Name = "Csalir";
 		this.Csalir.UseUnderline = true;
@@ -105,6 +108,7 @@ public partial class MainWindow
 		this.Pantalla.Name = "Pantalla";
 		this.Pantalla.IsEditable = false;
 		this.Pantalla.InvisibleChar = '•';
+		this.Pantalla.Xalign = 1F;
 		this.vbox3.Add(this.Pantalla);
 		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.Pantalla]));
 		w4.Position = 1;
@@ -356,8 +360,8 @@ public partial class MainWindow
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 244;
-		this.DefaultHeight = 360;
+		this.DefaultWidth = 298;
+		this.DefaultHeight = 381;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.Csalir.Clicked += new global::System.EventHandler(this.OnCsalirClicked);

@@ -6,12 +6,13 @@
   <import>
     <widget-library name="../bin/Debug/Calculadora.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="244 360">
+  <widget class="Gtk.Window" id="MainWindow" design-size="298 381">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
-    <property name="WindowPosition">CenterOnParent</property>
+    <property name="WindowPosition">CenterAlways</property>
     <property name="BorderWidth">9</property>
     <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.VBox" id="vbox3">
@@ -24,7 +25,7 @@
             <child>
               <widget class="Gtk.Label" id="Ctitulo">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Calculadora v.1.0</property>
+                <property name="LabelProp" translatable="yes">Calculadora</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -34,6 +35,8 @@
             <child>
               <widget class="Gtk.Button" id="Csalir">
                 <property name="MemberName" />
+                <property name="WidthRequest">50</property>
+                <property name="HeightRequest">50</property>
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Salir</property>
@@ -61,6 +64,7 @@
             <property name="CanFocus">True</property>
             <property name="IsEditable">False</property>
             <property name="InvisibleChar">•</property>
+            <property name="Xalign">1</property>
           </widget>
           <packing>
             <property name="Position">1</property>

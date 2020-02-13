@@ -1,21 +1,34 @@
 ﻿using System;
 using Gtk;
 
+
 public partial class MainWindow : Gtk.Window
 {
     int contador = 0;
+    Gdk.Color colorines = new Gdk.Color(135, 171, 171);
 
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
+        ModifyBg(StateType.Normal, colorines);
         Ccancelar.ModifyBg(StateType.Normal, new Gdk.Color(222, 78, 48));
         Cmas.ModifyBg(StateType.Normal, new Gdk.Color(13, 164, 18));
+        Cmenos.ModifyBg(StateType.Normal, new Gdk.Color(204, 208, 206));
+        Cdividir.ModifyBg(StateType.Normal, new Gdk.Color(204, 208, 206));
+        Cigual.ModifyBg(StateType.Normal, new Gdk.Color(204, 208, 206));
+        Cmultiplicar.ModifyBg(StateType.Normal, new Gdk.Color(204, 208, 206));
+        Ccoma.ModifyBg(StateType.Normal, new Gdk.Color(204, 208, 206));
+        Cvaciar.ModifyBg(StateType.Normal, new Gdk.Color(204, 208, 206));
+        Ctitulo.ModifyFont(Pango.FontDescription.FromString("Purisa Bold 18"));
+
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
+
         Application.Quit();
         a.RetVal = true;
+
     }
 
     protected void OnCcomaClicked(object sender, EventArgs e)
@@ -155,4 +168,7 @@ public partial class MainWindow : Gtk.Window
         Application.Quit();
     }
 
+    protected void OnStyleSet(object o, StyleSetArgs args)
+    {
+    }
 }
