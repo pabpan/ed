@@ -1,15 +1,18 @@
 ﻿using System;
 using Gtk;
 
-
 public partial class MainWindow : Gtk.Window
 {
-    int contador = 0;
+    int contador = 0, opcion, contador_operaciones;
+    float num1, num2, resultado;
     Gdk.Color colorines = new Gdk.Color(135, 171, 171);
+
+    Operaciones resultados = new Operaciones();
 
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
+
         ModifyBg(StateType.Normal, colorines);
         Ccancelar.ModifyBg(StateType.Normal, new Gdk.Color(222, 78, 48));
         Cmas.ModifyBg(StateType.Normal, new Gdk.Color(13, 164, 18));
@@ -22,14 +25,70 @@ public partial class MainWindow : Gtk.Window
         Ctitulo.ModifyFont(Pango.FontDescription.FromString("Purisa Bold 18"));
 
     }
-
-    protected void OnDeleteEvent(object sender, DeleteEventArgs a)
+    //SUMA
+    protected void OnCmasClicked(object sender, EventArgs e)
     {
-
-        Application.Quit();
-        a.RetVal = true;
-
+        opcion = 1;
+        num1 = Convert.ToSingle(Pantalla.Text);
+        Pantalla.DeleteText(0, Pantalla.Text.Length);
     }
+    //RESTA
+    protected void OnCmenosClicked(object sender, EventArgs e)
+    {
+        opcion = 2;
+        num1 = Convert.ToSingle(Pantalla.Text);
+        Pantalla.DeleteText(0, Pantalla.Text.Length);
+    }
+    //MULTIPLICACIÓN
+    protected void OnCmultiplicarClicked(object sender, EventArgs e)
+    {
+        opcion = 3;
+        num1 = Convert.ToSingle(Pantalla.Text);
+        Pantalla.DeleteText(0, Pantalla.Text.Length);
+    }
+    //DIVISIÓN
+    protected void OnCdividirClicked(object sender, EventArgs e)
+    {
+        opcion = 4;
+        num1 = Convert.ToSingle(Pantalla.Text);
+        Pantalla.DeleteText(0, Pantalla.Text.Length);
+    }
+    //RESULTADO
+    protected void OnCigualClicked(object sender, EventArgs e)
+    {
+        num2 = Convert.ToSingle(Pantalla.Text);
+        Pantalla.DeleteText(0, Pantalla.Text.Length);
+
+        switch (opcion)
+        {
+            case 1:
+                resultado = resultados.suma(num1, num2);
+                Pantalla.InsertText(Convert.ToString(resultado));
+                contador_operaciones++;
+                break;
+            case 2:
+                resultado = resultados.resta(num1, num2);
+                Pantalla.InsertText(Convert.ToString(resultado));
+                contador_operaciones++;
+                break;
+            case 3:
+                resultado = resultados.multiplicacion(num1, num2);
+                Pantalla.InsertText(Convert.ToString(resultado));
+                contador_operaciones++;
+                break;
+            case 4:
+                resultado = resultados.division(num1, num2);
+                Pantalla.InsertText(Convert.ToString(resultado));
+                contador_operaciones++;
+                break;
+        }
+    }
+    //SALIR
+    protected void OnCsalirClicked(object sender, EventArgs e)
+    {
+        Application.Quit();
+    }
+    //
 
     protected void OnCcomaClicked(object sender, EventArgs e)
     {
@@ -43,6 +102,9 @@ public partial class MainWindow : Gtk.Window
         }
     }
 
+    //LISTADO DE NÚMEROS:
+
+    //CERO ====================================================//
     protected void OnCceroClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
@@ -50,102 +112,71 @@ public partial class MainWindow : Gtk.Window
         Pantalla.InsertText(display + "0");
 
     }
-
-    protected void OnCigualClicked(object sender, EventArgs e)
-    {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "=");
-    }
-
-    protected void OnCmasClicked(object sender, EventArgs e)
-    {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "+");
-    }
-
+    //UNO ====================================================//
     protected void OnCunoClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "1");
     }
-
+    //DOS ====================================================//
     protected void OnCdosClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "2");
     }
-
+    //TRES ====================================================//
     protected void OnCtresClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "3");
     }
-
-    protected void OnCmenosClicked(object sender, EventArgs e)
-    {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "-");
-    }
-
+    //CUATRO ====================================================//
     protected void OnCcuatroClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "4");
     }
-
+    //CINCO ====================================================//
     protected void OnCcincoClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "5");
     }
-
+    //SEIS ====================================================//
     protected void OnCseisClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "6");
     }
-
-    protected void OnCmultiplicarClicked(object sender, EventArgs e)
-    {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "*");
-    }
-
+    //SIETE ====================================================//
     protected void OnCsieteClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "7");
     }
-
+    //OCHO ====================================================//
     protected void OnCochoClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "8");
     }
+    //NUEVE ====================================================//
     protected void OnCnueveClicked(object sender, EventArgs e)
     {
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "9");
     }
-    protected void OnCdividirClicked(object sender, EventArgs e)
-    {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "/");
-    }
+
+    //VACIAR, CANCELAR
 
     protected void OnCcancelarClicked(object sender, EventArgs e)
     {
@@ -163,12 +194,12 @@ public partial class MainWindow : Gtk.Window
         contador=0;
     }
 
-    protected void OnCsalirClicked(object sender, EventArgs e)
+    protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
+
         Application.Quit();
+        a.RetVal = true;
+
     }
 
-    protected void OnStyleSet(object o, StyleSetArgs args)
-    {
-    }
 }

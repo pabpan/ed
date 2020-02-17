@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.ItemProperties.Calculadora PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.cs">
     <Files>
-      <File FileName="Program.cs" Line="15" Column="6" />
-      <File FileName="MainWindow.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="MainWindow.cs" Line="62" Column="24" />
+      <File FileName="Operaciones.cs" Line="1" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,8 +21,8 @@
       <Pad Id="ClassPad">
         <State name="__root__">
           <Node name="Calculadora" expanded="True">
-            <Node name="Calculadora" expanded="True">
-              <Node name="References" expanded="True" selected="True" />
+            <Node name="Calculadora" expanded="True" selected="True">
+              <Node name="References" expanded="True" />
             </Node>
           </Node>
         </State>
