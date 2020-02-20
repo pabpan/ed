@@ -3,7 +3,7 @@ using Gtk;
 
 public partial class MainWindow : Gtk.Window
 {
-    int contador = 0, opcion, contador_operaciones;
+    int contador = 0, opcion, contador_igual;
     float num1, num2, resultado;
     Gdk.Color colorines = new Gdk.Color(135, 171, 171);
 
@@ -60,36 +60,36 @@ public partial class MainWindow : Gtk.Window
         Pantalla.DeleteText(0, Pantalla.Text.Length);
 
         switch (opcion)
-        {
-            case 1:
-                resultado = resultados.suma(num1, num2);
-                Pantalla.InsertText(Convert.ToString(resultado));
-                contador_operaciones++;
-                break;
-            case 2:
-                resultado = resultados.resta(num1, num2);
-                Pantalla.InsertText(Convert.ToString(resultado));
-                contador_operaciones++;
-                break;
-            case 3:
-                resultado = resultados.multiplicacion(num1, num2);
-                Pantalla.InsertText(Convert.ToString(resultado));
-                contador_operaciones++;
-                break;
-            case 4:
-                resultado = resultados.division(num1, num2);
-                Pantalla.InsertText(Convert.ToString(resultado));
-                contador_operaciones++;
-                break;
-        }
+            {
+                case 1:
+               
+                    resultado = resultados.suma(num1, num2);
+                    Pantalla.InsertText(Convert.ToString(resultado));
+                    contador_igual++;
+                    break;
+                case 2:
+                    resultado = resultados.resta(num1, num2);
+                    Pantalla.InsertText(Convert.ToString(resultado));
+                    contador_igual++;
+                    break;
+                case 3:
+                    resultado = resultados.multiplicacion(num1, num2);
+                    Pantalla.InsertText(Convert.ToString(resultado));
+                    contador_igual++;
+                    break;
+                case 4:
+                    resultado = resultados.division(num1, num2);
+                    Pantalla.InsertText(Convert.ToString(resultado));
+                    contador_igual++;
+                    break;
+            }
     }
     //SALIR
     protected void OnCsalirClicked(object sender, EventArgs e)
     {
         Application.Quit();
     }
-    //
-
+    //DECIMAL
     protected void OnCcomaClicked(object sender, EventArgs e)
     {
 
@@ -110,7 +110,6 @@ public partial class MainWindow : Gtk.Window
         String display = Pantalla.Text.ToString();
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         Pantalla.InsertText(display + "0");
-
     }
     //UNO ====================================================//
     protected void OnCunoClicked(object sender, EventArgs e)
@@ -196,10 +195,8 @@ public partial class MainWindow : Gtk.Window
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
-
         Application.Quit();
         a.RetVal = true;
-
     }
 
 }
