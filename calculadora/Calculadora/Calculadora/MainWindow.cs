@@ -59,10 +59,13 @@ public partial class MainWindow : Gtk.Window
         num2 = Convert.ToSingle(Pantalla.Text);
         Pantalla.DeleteText(0, Pantalla.Text.Length);
 
-        switch (opcion)
+        if (contador_igual == 0)
+
+        {
+            switch (opcion)
             {
                 case 1:
-               
+
                     resultado = resultados.suma(num1, num2);
                     Pantalla.InsertText(Convert.ToString(resultado));
                     contador_igual++;
@@ -83,6 +86,12 @@ public partial class MainWindow : Gtk.Window
                     contador_igual++;
                     break;
             }
+        }
+        else
+        {
+            Pantalla.InsertText("Vacía para continuar");
+            contador_igual++;
+        }
     }
     //SALIR
     protected void OnCsalirClicked(object sender, EventArgs e)
@@ -107,72 +116,112 @@ public partial class MainWindow : Gtk.Window
     //CERO ====================================================//
     protected void OnCceroClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "0");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "0");
+        }
     }
     //UNO ====================================================//
     protected void OnCunoClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "1");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "1");
+        }
     }
     //DOS ====================================================//
     protected void OnCdosClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "2");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "2");
+        }
     }
     //TRES ====================================================//
     protected void OnCtresClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "3");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "3");
+        }
     }
     //CUATRO ====================================================//
     protected void OnCcuatroClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "4");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "4");
+        }
     }
     //CINCO ====================================================//
     protected void OnCcincoClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "5");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "5");
+        }
     }
     //SEIS ====================================================//
     protected void OnCseisClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "6");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "6");
+        }
     }
     //SIETE ====================================================//
     protected void OnCsieteClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "7");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "7");
+        }
     }
     //OCHO ====================================================//
     protected void OnCochoClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "8");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "8");
+        }
     }
     //NUEVE ====================================================//
     protected void OnCnueveClicked(object sender, EventArgs e)
     {
-        String display = Pantalla.Text.ToString();
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
-        Pantalla.InsertText(display + "9");
+        if (contador_igual == 0)
+
+        {
+            String display = Pantalla.Text.ToString();
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+            Pantalla.InsertText(display + "9");
+        }
     }
 
     //VACIAR, CANCELAR
@@ -191,6 +240,7 @@ public partial class MainWindow : Gtk.Window
     {
         Pantalla.DeleteText(0, Pantalla.Text.Length);
         contador=0;
+        contador_igual = 0;
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
