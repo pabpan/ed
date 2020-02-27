@@ -28,30 +28,46 @@ public partial class MainWindow : Gtk.Window
     //SUMA
     protected void OnCmasClicked(object sender, EventArgs e)
     {
-        opcion = 1;
-        num1 = Convert.ToSingle(Pantalla.Text);
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
+        if (contador_igual == 0)
+
+        {
+            opcion = 1;
+            num1 = Convert.ToSingle(Pantalla.Text);
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+        }
     }
     //RESTA
     protected void OnCmenosClicked(object sender, EventArgs e)
     {
-        opcion = 2;
-        num1 = Convert.ToSingle(Pantalla.Text);
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
+        if (contador_igual == 0)
+
+        {
+            opcion = 2;
+            num1 = Convert.ToSingle(Pantalla.Text);
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+        }
     }
     //MULTIPLICACIÓN
     protected void OnCmultiplicarClicked(object sender, EventArgs e)
     {
-        opcion = 3;
-        num1 = Convert.ToSingle(Pantalla.Text);
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
+        if (contador_igual == 0)
+
+        {
+            opcion = 3;
+            num1 = Convert.ToSingle(Pantalla.Text);
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+        }
     }
     //DIVISIÓN
     protected void OnCdividirClicked(object sender, EventArgs e)
     {
-        opcion = 4;
-        num1 = Convert.ToSingle(Pantalla.Text);
-        Pantalla.DeleteText(0, Pantalla.Text.Length);
+        if (contador_igual == 0)
+
+        {
+            opcion = 4;
+            num1 = Convert.ToSingle(Pantalla.Text);
+            Pantalla.DeleteText(0, Pantalla.Text.Length);
+        }
     }
     //RESULTADO
     protected void OnCigualClicked(object sender, EventArgs e)
@@ -89,7 +105,7 @@ public partial class MainWindow : Gtk.Window
         }
         else
         {
-            Pantalla.InsertText("Vacía para continuar");
+            Pantalla.InsertText("↡Vacía para continuar↡");
             contador_igual++;
         }
     }

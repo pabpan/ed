@@ -70,6 +70,7 @@
             <property name="Position">1</property>
             <property name="AutoSize">False</property>
             <property name="Expand">False</property>
+            <property name="Fill">False</property>
           </packing>
         </child>
         <child>

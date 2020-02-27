@@ -113,6 +113,7 @@ public partial class MainWindow
 		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.Pantalla]));
 		w4.Position = 1;
 		w4.Expand = false;
+		w4.Fill = false;
 		// Container child vbox3.Gtk.Box+BoxChild
 		this.hbox7 = new global::Gtk.HBox();
 		this.hbox7.Name = "hbox7";
