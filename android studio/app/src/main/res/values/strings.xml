@@ -2,6 +2,10 @@
     <string name="app_name">MiPrimeraApp</string>
     <string name="txt_num1">Escribe el Primer Número</string>
     <string name="txt_num2">Escribe el Segundo Número</string>
-    <string name="B_suma">Suma</string>
     <string name="txt_resultado">Resultado</string>
+    <string name="resultado">Resultado</string>
+    <string name="resta">RESTA</string>
+    <string name="multiplicar">MULTIPLICAR</string>
+    <string name="dividir">DIVIDIR</string>
+    <string name="suma">SUMA</string>
 </resources>
