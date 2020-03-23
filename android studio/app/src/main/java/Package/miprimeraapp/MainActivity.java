@@ -3,23 +3,42 @@ package Package.miprimeraapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    /*DECLARAMOS COMPONENTES DE TIPO PRIVADO*/
+
+    private EditText et1, et2;
+    private TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*INICIALIZAMOS LOS COMPONENTES*/
+
+        et1 = (EditText) findViewById(R.id.txt_num1);
+        et2 = (EditText) findViewById(R.id.txt_num2);
+        tv1 = (TextView) findViewById(R.id.txt_resultado);
     }
 
-    /*FUNCIÓN SUMA*/
+    /*MÉTODO SUMA*/
 
-    protected int suma(int suma){
-        int num1=0;
-        int num2=0;
-        suma=num1+num2;
-        return suma;
+    public void sumar(View View){
 
+        /*Definimos las variables*/
+        int num1 = Integer.parseInt(et1.getText().toString());
+        int num2 = Integer.parseInt(et2.getText().toString());
+
+        /*Realizamos la operación*/
+        int suma = num1 + num2;
+
+        /*Mostrar el resultado y convertir a String de nuevo*/
+        tv1.setText(String.valueOf(suma));
 
     }
 }
