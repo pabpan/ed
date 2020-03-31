@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="CB_SUMA" type="id" />
+    <item name="CB_RESTA" type="id" />
+    <item name="CB_MULTIPLICAR" type="id" />
+    <item name="CB_DIVIDIR" type="id" />
+</resources>

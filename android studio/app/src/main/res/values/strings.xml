@@ -2,10 +2,22 @@
     <string name="app_name">MiPrimeraApp</string>
     <string name="txt_num1">Escribe el Primer Número</string>
     <string name="txt_num2">Escribe el Segundo Número</string>
-    <string name="txt_resultado">Resultado</string>
+    <string name="txt_resultado">Resultado Radio Button</string>
+    <string name="txt_resultado_cb">Resultado Checkbox</string>
     <string name="resultado">Resultado</string>
     <string name="resta">RESTA</string>
+    <string name="suma">SUMA</string>
+    <string name="RB_SUMA">SUMA</string>
+    <string name="RB_RESTA">RESTA</string>
+    <string name="RB_MULTIPLICAR">MULTIPLICAR</string>
+    <string name="RB_DIVIDIR">DIVIDIR</string>
+    <string name="CB_SUMA">SUMA</string>
+    <string name="CB_RESTA">RESTA</string>
+    <string name="CB_MULTIPLICAR">MULTIPLICAR</string>
+    <string name="CB_DIVIDIR">DIVIDIR</string>
+    <string name="sumar">SUMAR</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="restar">RESTAR</string>
     <string name="multiplicar">MULTIPLICAR</string>
     <string name="dividir">DIVIDIR</string>
-    <string name="suma">SUMA</string>
 </resources>
