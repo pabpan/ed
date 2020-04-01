@@ -77,17 +77,15 @@ public class MainActivity extends AppCompatActivity {
             rb3.setChecked(false);
             cerrar_teclado();
         } else if (rb4.isChecked() == true) {
+            int dividir = num1 / num2;
             if (num2 == 0) {
                 Toast.makeText(this, " La operación no es posible", Toast.LENGTH_LONG).show();
-                rb4.setChecked(false);
-                cerrar_teclado();
-            } else {
-                int dividir = num1 / num2;
-                tv1.setText(String.valueOf(dividir));
-                rb4.setChecked(false);
-                cerrar_teclado();
             }
+            tv1.setText(String.valueOf(dividir));
+            rb4.setChecked(false);
+            cerrar_teclado();
         }
+
 
         /*CONDICIONES PARA CHECKBOX*/
 
@@ -122,75 +120,22 @@ public class MainActivity extends AppCompatActivity {
             }
         } else if (cb2.isChecked() != true && cb3.isChecked() != true && cb4.isChecked() == true) {
             resultado = "La División es: " + division_cb + "\n";
-        }
-        else if (cb2.isChecked() != true && cb3.isChecked() == true && cb4.isChecked() != true){
+        } else if (cb2.isChecked() != true && cb3.isChecked() == true && cb4.isChecked() != true) {
             resultado = "La Multiplicación es: " + multiplicacion_cb + "\n";
-        }
-        else if (cb2.isChecked() == true && cb3.isChecked() != true && cb4.isChecked() != true){
+        } else if (cb2.isChecked() == true && cb3.isChecked() != true && cb4.isChecked() != true) {
             resultado = "La Resta es: " + resta_cb + "\n";
-        }
-        else if (cb2.isChecked() == true && cb3.isChecked() == true && cb4.isChecked() != true){
-            resultado = "La Resta es: " + resta_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n";;
-        }
-        else if (cb2.isChecked() == true && cb3.isChecked() != true && cb4.isChecked() == true){
-            resultado = "La Resta es: " + resta_cb + "\n" + "La División es: " + division_cb + "\n";;
+        } else if (cb2.isChecked() == true && cb3.isChecked() == true && cb4.isChecked() != true) {
+            resultado = "La Resta es: " + resta_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n";
+            ;
+        } else if (cb2.isChecked() == true && cb3.isChecked() != true && cb4.isChecked() == true) {
+            resultado = "La Resta es: " + resta_cb + "\n" + "La División es: " + division_cb + "\n";
+            ;
 
-        }
-        else if (cb2.isChecked() == true && cb3.isChecked() == true && cb4.isChecked() == true){
+        } else if (cb2.isChecked() == true && cb3.isChecked() == true && cb4.isChecked() == true) {
             resultado = "La Resta es: " + resta_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n" + "La División es: " + division_cb + "\n";
-        }
-        else if (cb2.isChecked() != true && cb3.isChecked() == true && cb4.isChecked() == true){
+        } else if (cb2.isChecked() != true && cb3.isChecked() == true && cb4.isChecked() == true) {
             resultado = "La Multiplicación es: " + multiplicacion_cb + "\n" + "La División es: " + division_cb + "\n";
         }
-
-
-
- /*           else if (cb2.isChecked() == true) {
-                resultado = "La Suma es: " + suma_cb + "\n" + "La Resta es: " + resta_cb + "\n";
-            }
-        } else if (cb2.isChecked() == true) {
-            resultado = "La Resta es: " + resta_cb + "\n";
-        }
-        if (cb3.isChecked() == true) {
-            if (cb4.isChecked() != true) {
-                resultado = "La Multiplicación es: " + multiplicacion_cb + "\n";
-            } else if (cb3.isChecked() == true) {
-                resultado = "La Multiplicación es: " + multiplicacion_cb + "\n" + "La División es: " + division_cb + "\n";
-            }
-        } else if (cb4.isChecked() == true) {
-            resultado = "La División es: " + division_cb + "\n";
-        }
-        //
-
-
-        if (cb1.isChecked() == true) {
-            if (cb2.isChecked() != true) {
-                resultado = "La Suma es: " + suma_cb + "\n";
-            } else if (cb2.isChecked() == true) {
-                resultado = "La Suma es: " + suma_cb + "\n" + "La Resta es: " + resta_cb + "\n";
-            }
-        } else if (cb2.isChecked() == true) {
-            resultado = "La Resta es: " + resta_cb + "\n";
-        }
-        //
-        if (cb1.isChecked() == true) {
-            if (cb2.isChecked() != true) {
-                resultado = "La Suma es: " + suma_cb + "\n";
-            } else if (cb2.isChecked() == true) {
-                resultado = "La Suma es: " + suma_cb + "\n" + "La Resta es: " + resta_cb + "\n";
-            }
-        } else if (cb2.isChecked() == true) {
-            resultado = "La Resta es: " + resta_cb + "\n";
-        }
-        if (cb1.isChecked() == true) {
-            if (cb2.isChecked() != true) {
-                resultado = "La Suma es: " + suma_cb + "\n";
-            } else if (cb2.isChecked() == true) {
-                resultado = "La Suma es: " + suma_cb + "\n" + "La Resta es: " + resta_cb + "\n";
-            }
-        } else if (cb2.isChecked() == true) {
-            resultado = "La Resta es: " + resta_cb + "\n";
-        }*/
         tv2.setText(resultado);
         cb1.setChecked(false);
         cb2.setChecked(false);
@@ -199,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
         cerrar_teclado();
     }
 }
+
+/*SEMANA 1 - CÓDIGO COMENTADO*/
 
 /*MÉTODO SUMA*//*
 
@@ -290,6 +237,5 @@ public class MainActivity extends AppCompatActivity {
 
         tv1.setText(String.valueOf(division));
     }
-
 }
 */
