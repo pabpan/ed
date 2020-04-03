@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MiPrimeraApp</string>
+    <string name="app_name">Calculadora v3</string>
     <string name="txt_num1">Escribe el Primer Número</string>
     <string name="txt_num2">Escribe el Segundo Número</string>
     <string name="txt_resultado">Resultado Radio Button</string>

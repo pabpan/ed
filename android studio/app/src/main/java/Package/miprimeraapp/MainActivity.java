@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //PONER ICONO EN EL ACTION BAR
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         /*INICIALIZAMOS LOS COMPONENTES*/
 
         et1 = (EditText) findViewById(R.id.txt_num1);
@@ -77,11 +82,12 @@ public class MainActivity extends AppCompatActivity {
             rb3.setChecked(false);
             cerrar_teclado();
         } else if (rb4.isChecked() == true) {
-            int dividir = num1 / num2;
-            if (num2 == 0) {
-                Toast.makeText(this, " La operación no es posible", Toast.LENGTH_LONG).show();
+            if (num2 != 0) {
+                int dividir = num1 / num2;
+                tv1.setText(String.valueOf(dividir));
+            } else {
+                Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_LONG).show();
             }
-            tv1.setText(String.valueOf(dividir));
             rb4.setChecked(false);
             cerrar_teclado();
         }
@@ -92,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         int suma_cb = num1 + num2;
         int resta_cb = num1 - num2;
         int multiplicacion_cb = num1 * num2;
-        int division_cb = num1 / num2;
+        int division_cb = 0;
         String resultado = "";
 
         if (cb1.isChecked() == true) {
@@ -101,11 +107,21 @@ public class MainActivity extends AppCompatActivity {
                     if (cb4.isChecked() != true) {
                         resultado = "La Suma es: " + suma_cb + "\n";
                     } else if (cb4.isChecked() == true) {
+                        if (num2 != 0) {
+                            division_cb = num1 / num2;
+                        } else {
+                            Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_SHORT).show();
+                        }
                         resultado = "La Suma es: " + suma_cb + "\n" + "La División es: " + division_cb + "\n";
                     }
                 } else if (cb3.isChecked() == true) {
                     resultado = "La Suma es: " + suma_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n";
                     if (cb4.isChecked() == true) {
+                        if (num2 != 0) {
+                            division_cb = num1 / num2;
+                        } else {
+                            Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_SHORT).show();
+                        }
                         resultado = "La Suma es: " + suma_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n" + "La División es: " + division_cb + "\n";
                     }
                 }
@@ -115,10 +131,20 @@ public class MainActivity extends AppCompatActivity {
                     resultado = "La Suma es: " + suma_cb + "\n" + "La Resta es: " + resta_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n";
                 }
                 if (cb4.isChecked() == true) {
+                    if (num2 != 0) {
+                        division_cb = num1 / num2;
+                    } else {
+                        Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_SHORT).show();
+                    }
                     resultado = "La Suma es: " + suma_cb + "\n" + "La Resta es: " + resta_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n" + "La División es: " + division_cb + "\n";
                 }
             }
         } else if (cb2.isChecked() != true && cb3.isChecked() != true && cb4.isChecked() == true) {
+            if (num2 != 0) {
+                division_cb = num1 / num2;
+            } else {
+                Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_SHORT).show();
+            }
             resultado = "La División es: " + division_cb + "\n";
         } else if (cb2.isChecked() != true && cb3.isChecked() == true && cb4.isChecked() != true) {
             resultado = "La Multiplicación es: " + multiplicacion_cb + "\n";
@@ -128,12 +154,26 @@ public class MainActivity extends AppCompatActivity {
             resultado = "La Resta es: " + resta_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n";
             ;
         } else if (cb2.isChecked() == true && cb3.isChecked() != true && cb4.isChecked() == true) {
+            if (num2 != 0) {
+                division_cb = num1 / num2;
+            } else {
+                Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_SHORT).show();
+            }
             resultado = "La Resta es: " + resta_cb + "\n" + "La División es: " + division_cb + "\n";
-            ;
 
         } else if (cb2.isChecked() == true && cb3.isChecked() == true && cb4.isChecked() == true) {
+            if (num2 != 0) {
+                division_cb = num1 / num2;
+            } else {
+                Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_SHORT).show();
+            }
             resultado = "La Resta es: " + resta_cb + "\n" + "La Multiplicación es: " + multiplicacion_cb + "\n" + "La División es: " + division_cb + "\n";
         } else if (cb2.isChecked() != true && cb3.isChecked() == true && cb4.isChecked() == true) {
+            if (num2 != 0) {
+                division_cb = num1 / num2;
+            } else {
+                Toast.makeText(this, "No se puede hacer la operación", Toast.LENGTH_SHORT).show();
+            }
             resultado = "La Multiplicación es: " + multiplicacion_cb + "\n" + "La División es: " + division_cb + "\n";
         }
         tv2.setText(resultado);
