@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Validar_usuario</string>
+    <string name="txt_usuario">Usuario</string>
+    <string name="txt_contrasenya">Contraseña</string>
+    <string name="boton_entrar">Iniciar sesión</string>
+    <string name="txt_sesion_iniciada">Mensaje de bienvenida</string>
+    <string name="boton_cerrar_sesion">Cerrar sesión</string>
+</resources>
